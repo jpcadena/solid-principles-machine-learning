@@ -1,6 +1,7 @@
 """
 Single Responsibility Principle
 """
+from typing import Any
 
 
 class DLModel:
@@ -8,12 +9,13 @@ class DLModel:
     Class that represents Deep Learning Model
     """
 
-    def train(self, features: list) -> list:
+    @staticmethod
+    def train(features: list[Any]) -> list[Any]:
         """
         here goes training code
-        :param features:
+        :param features: The list of features to train
         :type features: list
-        :return:
+        :return: The list of features
         :rtype: list
         """
         print("Model has been trained")
@@ -25,10 +27,11 @@ class Preprocessor:
     Class that represents Preprocessor
     """
 
-    def preprocess(self, features: list) -> None:
+    @staticmethod
+    def preprocess(features: list[Any]) -> None:
         """
         here goes preprocessing code
-        :param features:
+        :param features: The features to preprocess
         :type features: list
         :return: None
         :rtype: NoneType
@@ -41,11 +44,12 @@ class DlEvaluator:
     Class that represents Deep Learning Evaluator
     """
 
-    def evaluate(self, model: DLModel) -> None:
+    @staticmethod
+    def evaluate(model: DLModel) -> None:
         """
         here goes evaluation code
-        :param model:
-        :type model:
+        :param model: The model to be evaluated
+        :type model: DLModel
         :return: None
         :rtype: NoneType
         """
@@ -53,10 +57,7 @@ class DlEvaluator:
 
 
 if __name__ == "__main__":
-    my_features: list[list[int]] = [
-        [0, 1, 2],
-        [1, 2, 3]
-    ]
+    my_features: list[list[int]] = [[0, 1, 2], [1, 2, 3]]
     my_model: DLModel = DLModel()
     preprocessor: Preprocessor = Preprocessor()
     evaluator: DlEvaluator = DlEvaluator()

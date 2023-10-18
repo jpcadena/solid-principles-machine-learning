@@ -2,6 +2,7 @@
 Liskov Substitution Principle
 """
 from abc import ABC, abstractmethod
+from typing import Any
 
 # # LSP violation
 # class Extractor(ABC):
@@ -50,8 +51,8 @@ class MelSpectrogramExtractor(Extractor):
     Mel Spectrogram Extractor class that inherits from Extractor
     """
 
-    def __init__(self, num_mels) -> None:
-        self.num_mfccs = num_mels
+    def __init__(self, mels: Any) -> None:
+        self.mfcss: Any = mels
 
     def extract(self, data: list[int]) -> None:
         print("Extracted spectrogram")
@@ -62,8 +63,8 @@ class MFCCExtractor(Extractor):
     MFCC Extractor class that inherits from Extractor
     """
 
-    def __init__(self, num_mfccs) -> None:
-        self.num_mfccs = num_mfccs
+    def __init__(self, mfcss: Any) -> None:
+        self.mfcss: Any = mfcss
 
     def extract(self, data: list[int]) -> None:
         print("Extracted MFCC")

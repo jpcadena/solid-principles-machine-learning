@@ -1,19 +1,18 @@
 """
-Main script for ML project
+S.O.L.I.D Design Principles main script
 """
 
-# Data Engineering:
-# - Collection
-# - Analysis
-# - Visualization
-# - Labeling
-# Data Science:
-# - Selection
-# - Preprocessing: Formatting, Cleaning, Anonymization, Sampling
-# - Transformation: Scaling, Decomposition, Aggregation
-# - Splitting: Train(66-80), Test and Validation Sets (20-33)
-# - Modeling: Training with learning model
-# - Evaluation and testing:
-# - Improvement and ensemble methods
-# App:
-# - Deployment: Batch and web service for real-time streaming
+# Clean Code: A Handbook of Agile Software Craftsmanship
+# by: Robert C. Martin (Uncle Bob)
+# S - Single-responsibility Principle
+# O - Open-closed Principle
+# L - Liskov Substitution Principle
+# I - Interface Segregation Principle
+# D - Dependency Inversion Principle
+
+# One reason to change a class and create different classes handling
+# different tasks
+# Open for extension but closed for modification
+# Substitute a base type for a subtype
+# Split in separate interfaces: YAGNI (You Ain't Going to Need It)
+# High-level modules should not depend on low-level. Use abstractions

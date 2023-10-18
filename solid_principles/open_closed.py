@@ -1,7 +1,7 @@
 """
 Open-Closed Principle
 """
-from abc import abstractmethod, ABC
+from abc import ABC, abstractmethod
 
 # # OCP violation
 # class Extractor:
@@ -52,8 +52,8 @@ class Extractor(ABC):
     def extract(self, data: list[int]) -> None:
         """
         Extract abstract method for Extractor object
-        :param data:
-        :type data:
+        :param data: The data to extract
+        :type data: list[int]
         :return: None
         :rtype: NoneType
         """

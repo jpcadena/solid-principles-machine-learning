@@ -2,6 +2,7 @@
 Interface Segregation Principle
 """
 from abc import ABC, abstractmethod
+from typing import Any
 
 # # Violates ISP
 # class Recommender(ABC):
@@ -89,11 +90,11 @@ class ItemRecommender(ABC):
     """
 
     @abstractmethod
-    def get_closest_items(self, item) -> None:
+    def get_closest_items(self, item: Any) -> None:
         """
         Get the closest items abstract method
-        :param item:
-        :type item:
+        :param item: The item to get the closest items from
+        :type item: Any
         :return: None
         :rtype: NoneType
         """
@@ -105,27 +106,28 @@ class PersonalisedRecommender(ABC):
     """
 
     @abstractmethod
-    def get_personalised_recommendations(self, user) -> None:
+    def get_personalised_recommendations(self, user: Any) -> None:
         """
         Get personalised recommendations abstract method
-        :param user:
-        :type user:
+        :param user: The user to get personalises recommendations from
+        :type user: Any
         :return: None
         :rtype: NoneType
         """
 
 
-class CollaborativeFilteringRecommender(ItemRecommender,
-                                        PersonalisedRecommender):
+class CollaborativeFilteringRecommender(
+    ItemRecommender, PersonalisedRecommender
+):
     """
     Collaborative Filtering Recommender class that inherits from
      ItemRecommender and PersonalisedRecommender
     """
 
-    def get_closest_items(self, item):
+    def get_closest_items(self, item: Any) -> None:
         print("Recommended closest items")
 
-    def get_personalised_recommendations(self, user):
+    def get_personalised_recommendations(self, user: Any) -> None:
         print("Provided personalised recommendations")
 
 
@@ -135,10 +137,10 @@ class DLRecommender(ItemRecommender, PersonalisedRecommender):
      ItemRecommender and PersonalisedRecommender
     """
 
-    def get_closest_items(self, item):
+    def get_closest_items(self, item: Any) -> None:
         print("Recommended closest items")
 
-    def get_personalised_recommendations(self, user):
+    def get_personalised_recommendations(self, user: Any) -> None:
         print("Provided personalised recommendations")
 
 
@@ -148,5 +150,5 @@ class NearestNeighbourRecommender(ItemRecommender):
     ItemRecommender
     """
 
-    def get_closest_items(self, item):
+    def get_closest_items(self, item: Any) -> None:
         print("Recommended closest items")
