@@ -1,6 +1,7 @@
 """
 Dependency Inversion Principle
 """
+
 from abc import ABC, abstractmethod
 
 # # Dependency Inversion Violation

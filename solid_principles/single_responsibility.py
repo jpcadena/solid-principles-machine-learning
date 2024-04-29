@@ -1,6 +1,7 @@
 """
 Single Responsibility Principle
 """
+
 from typing import Any
 
 

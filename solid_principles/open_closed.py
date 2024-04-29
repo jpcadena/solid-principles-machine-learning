@@ -1,6 +1,7 @@
 """
 Open-Closed Principle
 """
+
 from abc import ABC, abstractmethod
 
 # # OCP violation
